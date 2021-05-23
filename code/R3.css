@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background: #fff; 
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2rem;
+}
+
+/* Card */
+.card {
+  margin: 25px auto;
+  height: auto;
+  width: 90vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  position: relative;
+  cursor: pointer;
+}
+
+.content {
+  width: auto;
+}
+
+img.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.screen {
+  width: 100%;
+  background: url(bbb.png) center no-repeat ;
+  background-size: cover;
+}
+
+.title {
+  margin: 1rem 0;
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+  .card {
+    flex-direction: row;
+    height: 40vh;
+    max-width: 70%;
+  }
+
+  .video {
+    height: 100%;
+    width: 100%;
+  }
+
+  .screen {
+    height: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 3rem;
+  }
+}
