@@ -41,7 +41,6 @@ h2 {
 
 .video {
   position: relative;
-  cursor: pointer;
 }
 
 .content {
@@ -65,6 +64,62 @@ img.play {
   margin: 1rem 0;
 }
 
+/* Modal */
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: -2rem;
+  right: 0.5rem;
+}
+
+.modal-close svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.modal#play-video:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.video-modal {
+  padding: 0.5rem;
+  max-width: 400px;
+}
+
+.video-modal video {
+  width: 100%;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  
+  .video-modal {
+    padding: 1rem;
+    max-width: 800px;
+  }
+  
+}
 
 /* Desktop */
 @media only screen and (min-width: 1025px) {
@@ -78,6 +133,7 @@ img.play {
     height: 100%;
     width: 100%;
   }
+
 
   .screen {
     height: 100%;
