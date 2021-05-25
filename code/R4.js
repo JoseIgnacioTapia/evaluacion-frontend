@@ -81,6 +81,20 @@ function insortingID(arr) {
   })
 }
 
+// Sort Age
+function sortingAges(arr) {
+  arr.sort(function (o1, o2) {
+    return getAge(o1.date_of_birth) - getAge(o2.date_of_birth);
+  })
+}
+
+// Reverse Ages
+function insortingAges(arr) {
+  arr.sort(function (o1, o2) {
+    return getAge(o2.date_of_birth) - getAge(o1.date_of_birth);
+  })
+}
+
 // Showing data on the table with this function
 const displayInfo = (users) => {
   users.forEach((user) => {
@@ -162,6 +176,21 @@ sortID.addEventListener('click', () => {
     displayInfo(listUsers);
   } else {
     insortingID(listUsers);
+
+    displayInfo(listUsers);
+  }
+});
+sortAge.addEventListener('click', () => {
+  
+  sortAge.classList.toggle('abc');
+  infoTable.innerHTML = '';
+
+  if (sortAge.classList.contains('abc')) {
+    sortingAges(listUsers);
+
+    displayInfo(listUsers);
+  } else {
+    insortingAges(listUsers);
 
     displayInfo(listUsers);
   }
